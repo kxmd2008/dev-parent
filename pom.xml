@@ -8,22 +8,11 @@
 	
 	<properties>
 		<ngbf-site-address>10.253.46.75</ngbf-site-address>
-		<ngbf-repo-address>10.253.46.75:8081</ngbf-repo-address>
-		<ngbf-ci-address>10.253.46.75:8082/hudson</ngbf-ci-address>
+		<ngbf-repo-address>localhost:8081</ngbf-repo-address>
+<!-- 		<ngbf-ci-address>10.253.46.75:8082/hudson</ngbf-ci-address> -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>3.0.5.RELEASE</spring.version>
 	</properties>
-
-	<scm>
-		<connection>scm:svn:https://svn.sungard.cn/svn/ngbf/%E5%B7%A5%E4%BD%9C%E5%BA%93/source/</connection>
-		<developerConnection>scm:svn:https://svn.sungard.cn/svn/ngbf/%E5%B7%A5%E4%BD%9C%E5%BA%93/source/</developerConnection>
-		<url>https://svn.sungard.cn/svn/ngbf/%E5%B7%A5%E4%BD%9C%E5%BA%93/source/</url>
-	</scm>
-
-	<ciManagement>
-		<system>ngbf</system>
-		<url>http://${ngbf-ci-address}</url>
-	</ciManagement>
 
 	<developers>
 		<developer>
@@ -37,13 +26,8 @@
 		<repository>
 			<id>ngbf-private</id>
 			<name>ngbf-private</name>
-			<url>http://${ngbf-repo-address}/repo/ngbf-private</url>
+			<url>http://${ngbf-repo-address}/artifactory/repo</url>
 		</repository>
-		<site>
-			<id>ngbf-site</id>
-			<url>dav:http://${ngbf-site-address}/sites</url>
-		</site>
-
 	</distributionManagement>
 
 	<build>
